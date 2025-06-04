@@ -1,29 +1,29 @@
 import React from "react";
 import { motion } from "framer-motion";
-import viru from "../../assets/viru.jpg"
+
 const developers = [
   {
-    name: "Sudhanshu Kumar",
-    role: "Frontend Developer /UI/UX Designer",
+    name: "Avi Raj",
+    role: "Frontend Developer",
     image: "https://randomuser.me/api/portraits/men/75.jpg",
     desc: "Crafts modern, responsive UIs using React and Tailwind CSS with attention to pixel-perfect details.",
   },
   {
-    name: "Avi Raj Singh",
-    role: "Full-Stack-Developer",
+    name: "Priya Sharma",
+    role: "UI/UX Designer",
     image: "https://randomuser.me/api/portraits/women/65.jpg",
     desc: "Designs seamless user journeys and sleek visual interfaces that prioritize usability and aesthetics.",
   },
   {
-    name: "Abhishke Pandey",
-    role: "Frontend Developer",
+    name: "Ravi Kumar",
+    role: "Full Stack Developer",
     image: "https://randomuser.me/api/portraits/men/50.jpg",
     desc: "Handles frontend to backend with expertise in MERN stack and REST API architecture.",
   },
   {
-    name: "Virat Rana",
-    role: "Marketing Expert",
-    image: viru,
+    name: "Neha Patel",
+    role: "React Developer",
+    image: "https://randomuser.me/api/portraits/women/32.jpg",
     desc: "Develops dynamic SPAs with reusable components and clean state management.",
   },
   {
@@ -40,7 +40,7 @@ const developers = [
   },
 ];
 
-const AboutDevelopers = () => {
+const Aboutdevelopers = () => {
   return (
     <section className="bg-gradient-to-br from-purple-50 to-indigo-100 py-12 px-3">
       <div className="max-w-7xl mx-auto">
@@ -77,4 +77,4 @@ const AboutDevelopers = () => {
   );
 };
 
-export default AboutDevelopers;
+export default Aboutdevelopers;
