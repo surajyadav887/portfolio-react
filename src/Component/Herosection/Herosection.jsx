@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-
 const prompts = [
   "We are Webala",
   "We are a tech family",

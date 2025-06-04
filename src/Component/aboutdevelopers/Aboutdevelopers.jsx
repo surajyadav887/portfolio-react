@@ -1,29 +1,34 @@
 import React from "react";
 import { motion } from "framer-motion";
+import image1 from "../../assets/viru.jpg"
+import abhi from "../../assets/abhi.png";
+import abhi1 from "../../assets/abhi1.png";
+import sudh1 from "../../assets/sudh.jpg";
+
 
 const developers = [
   {
-    name: "Avi Raj",
-    role: "Frontend Developer",
-    image: "https://randomuser.me/api/portraits/men/75.jpg",
+    name: "Avi Raj singh",
+    role: "FullStack-Developer",
+    image: abhi,
     desc: "Crafts modern, responsive UIs using React and Tailwind CSS with attention to pixel-perfect details.",
   },
   {
-    name: "Priya Sharma",
-    role: "UI/UX Designer",
-    image: "https://randomuser.me/api/portraits/women/65.jpg",
+    name: "Sudhanshu Kumar",
+    role: "Frontend Developer / UI/UX Designer",
+    image: sudh1,
     desc: "Designs seamless user journeys and sleek visual interfaces that prioritize usability and aesthetics.",
   },
   {
-    name: "Ravi Kumar",
-    role: "Full Stack Developer",
-    image: "https://randomuser.me/api/portraits/men/50.jpg",
+    name: "Abhishek Pandey",
+    role: "Frontend-Developer",
+    image: abhi1,
     desc: "Handles frontend to backend with expertise in MERN stack and REST API architecture.",
   },
   {
-    name: "Neha Patel",
-    role: "React Developer",
-    image: "https://randomuser.me/api/portraits/women/32.jpg",
+    name: "Virat Rana",
+    role: "Influencer",
+    image: image1,
     desc: "Develops dynamic SPAs with reusable components and clean state management.",
   },
   {
