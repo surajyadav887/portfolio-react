@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Lottie from "lottie-react";
-import webDevAnimation from "../../assets/webDev.json"; // path to your Lottie JSON
+import webDevAnimation from "../../assets/WebDev.json"; // path to your Lottie JSON
 
 const prompts = [
   "We are Webala",
