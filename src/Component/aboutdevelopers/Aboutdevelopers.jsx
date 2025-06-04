@@ -4,7 +4,7 @@ import image1 from "../../assets/viru.jpg"
 import abhi from "../../assets/abhi.png";
 import abhi1 from "../../assets/abhi1.png";
 import sudh1 from "../../assets/sudh.jpg";
-
+import suraj from "../../assets/suraj.jpg"
 
 const developers = [
   {
@@ -32,14 +32,14 @@ const developers = [
     desc: "Develops dynamic SPAs with reusable components and clean state management.",
   },
   {
-    name: "Aman Yadav",
-    role: "Mobile App Developer",
-    image: "https://randomuser.me/api/portraits/men/45.jpg",
+    name: "Suraj Yadav",
+    role: "Frontend Developer",
+    image: suraj,
     desc: "Builds powerful cross-platform apps using React Native and Flutter with smooth animations.",
   },
   {
-    name: "Sneha Gupta",
-    role: "Frontend Developer",
+    name: "Hritik Thakur",
+    role: "Python Developer & Ai/ml",
     image: "https://randomuser.me/api/portraits/women/68.jpg",
     desc: "Creates visually rich, accessible websites with performance in mind.",
   },

@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 
 // ⬇️ Import your service images
 import appImage from "../../assets/website.png";
-
+import image1 from "../../assets/app.png"
 const services = [
   {
-    image: appImage,
+    image: image1,
     title: "App Development",
     description:
       "We build seamless mobile applications tailored to your business needs, ensuring top performance and user engagement.",

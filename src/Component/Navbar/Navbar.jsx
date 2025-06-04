@@ -39,7 +39,7 @@ export default function PortfolioNavbar() {
   <div className="relative">
     <h1 className="text-4xl font-black uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-yellow-500 to-pink-600 drop-shadow-lg">
       <span className="inline-block animate-glow">Web</span>
-      <span className="text-indigo-500 animate-glow delay-200">ala</span>
+      <span className="text-indigo-500 animate-glow delay-200">la</span>
     </h1>
 
     {/* Shine line */}
