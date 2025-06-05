@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// ⬇️ Import your service images
 import appImage from "../../assets/website.png";
-import image1 from "../../assets/app.png"
+import image1 from "../../assets/app.png";
+
 const services = [
   {
     image: image1,
@@ -23,11 +23,14 @@ const services = [
 
 const Servicesprovider = () => {
   return (
-    <section className="pt-20 pb-14 bg-gradient-to-br from-white to-slate-100" id="services">
+    <section
+      className="pt-20 pb-14 bg-gradient-to-br from-white to-slate-100"
+      id="services"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
         {/* Heading */}
         <motion.h2
-          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 mb-12"
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 mb-6"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -35,6 +38,21 @@ const Servicesprovider = () => {
         >
           Our <span className="text-indigo-600">Services</span>
         </motion.h2>
+
+        {/* Subtext */}
+        <motion.p
+          className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto mb-12"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          Currently, we specialize in building world-class websites and mobile
+          apps. But this is just the beginning — in the coming days, we're
+          gearing up to solve even bigger problems through innovation,
+          automation, and design thinking. Stay tuned, the future is just
+          getting started.
+        </motion.p>
 
         {/* Cards */}
         <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-10">

@@ -5,53 +5,57 @@ import abhi from "../../assets/abhi.png";
 import abhi1 from "../../assets/abhi1.png";
 import sudh1 from "../../assets/sudh.jpg";
 import suraj from "../../assets/suraj.jpg"
-
+import ritik from "../../assets/ritik.jpg"
 const developers = [
   {
-    name: "Avi Raj singh",
-    role: "FullStack-Developer",
+    name: "Avi Raj Singh",
+    role: "Full Stack Developer",
     image: abhi,
-    desc: "Crafts modern, responsive UIs using React and Tailwind CSS with attention to pixel-perfect details.",
+    desc: "Expert in building full-fledged web applications with seamless integration between frontend and backend using the MERN stack.",
   },
   {
     name: "Sudhanshu Kumar",
     role: "Frontend Developer / UI/UX Designer",
     image: sudh1,
-    desc: "Designs seamless user journeys and sleek visual interfaces that prioritize usability and aesthetics.",
+    desc: "Specializes in designing engaging, user-centric interfaces with a sharp eye for color, typography, and intuitive layouts.",
   },
   {
     name: "Abhishek Pandey",
-    role: "Frontend-Developer",
+    role: "Frontend Developer",
     image: abhi1,
-    desc: "Handles frontend to backend with expertise in MERN stack and REST API architecture.",
+    desc: "Delivers fast, scalable, and accessible web apps using React, mastering component-driven development and performance tuning.",
   },
   {
     name: "Virat Rana",
-    role: "Influencer",
+    role: "Influencer / Web Developer",
     image: image1,
-    desc: "Develops dynamic SPAs with reusable components and clean state management.",
+    desc: "Combines social reach with technical expertise to promote, build, and review creative digital experiences and web tools.",
   },
   {
     name: "Suraj Yadav",
     role: "Frontend Developer",
     image: suraj,
-    desc: "Builds powerful cross-platform apps using React Native and Flutter with smooth animations.",
+    desc: "Creates elegant, high-performance UIs using React and Next.js, with a passion for animations, micro-interactions, and user delight.",
   },
   {
     name: "Hritik Thakur",
-    role: "Python Developer & Ai/ml",
-    image: "https://randomuser.me/api/portraits/women/68.jpg",
-    desc: "Creates visually rich, accessible websites with performance in mind.",
+    role: "Python Developer & AI/ML Engineer",
+    image: ritik,
+    desc: "Designs intelligent systems and automates processes using Python, with a strong foundation in machine learning and data science.",
   },
 ];
+
 
 const Aboutdevelopers = () => {
   return (
     <section className="bg-gradient-to-br from-purple-50 to-indigo-100 py-12 px-3">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-gray-800 mb-10">
-          Meet Our Team
-        </h2>
+      <h2
+  className="text-3xl sm:text-4xl font-extrabold text-center bg-gradient-to-r from-fuchsia-600 via-indigo-600 to-sky-600 bg-clip-text text-transparent font-['Playfair_Display'] mb-10"
+>
+  Meet Our Team
+</h2>
+
         <div className="grid grid-cols-2 md:grid-cols-3 gap-5 sm:gap-8">
           {developers.map((dev, index) => (
             <motion.div

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Lottie from "lottie-react";
-import webDevAnimation from "../../assets/WebDev.json"; // path to your Lottie JSON
+import webDevAnimation from "../../assets/WebDev.json";
 
 const prompts = [
   "We are Webala",
@@ -23,8 +23,11 @@ const Herosection = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-indigo-50 to-indigo-100 px-6 pt-24 md:pt-0">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-16">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-indigo-50 to-indigo-100 overflow-hidden px-6 pt-24 md:pt-0">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 z-0 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
+
+      <div className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-16">
         {/* Left Section - Text */}
         <motion.div
           initial={{ x: -100, opacity: 0 }}
@@ -58,10 +61,11 @@ const Herosection = () => {
             No shortcuts. No templates. Just powerful execution.
           </motion.p>
 
+          {/* Buttons */}
           <div className="flex gap-4 flex-wrap">
             <motion.a
               href="#projects"
-              className="px-6 py-3 bg-indigo-600 text-white rounded-full font-medium flex items-center gap-2 shadow-md hover:shadow-lg hover:bg-indigo-700 transition"
+              className="px-6 py-3 bg-gradient-to-r from-indigo-600 to-fuchsia-600 text-white rounded-full font-medium flex items-center gap-2 shadow-lg hover:scale-[1.03] hover:shadow-2xl transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -69,7 +73,7 @@ const Herosection = () => {
             </motion.a>
             <motion.a
               href="#contact"
-              className="px-6 py-3 border-2 border-indigo-600 text-indigo-700 rounded-full font-medium hover:bg-indigo-100 transition"
+              className="px-6 py-3 border border-indigo-600 text-indigo-700 rounded-full font-medium hover:bg-indigo-50 shadow-sm hover:scale-[1.03] transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -85,13 +89,16 @@ const Herosection = () => {
           transition={{ duration: 0.8 }}
           className="relative flex items-center justify-center"
         >
-          <div className="absolute w-80 h-80 md:w-[26rem] md:h-[26rem] rounded-full bg-gradient-to-r from-purple-400 via-indigo-500 to-blue-400 opacity-20 blur-[90px] animate-pulse"></div>
-          <div className="z-10 w-full max-w-md">
+          {/* Gradient Glow Background */}
+          <div className="absolute w-72 h-72 md:w-[26rem] md:h-[26rem] rounded-full bg-gradient-to-tr from-purple-400 via-indigo-500 to-blue-400 opacity-25 blur-[100px] animate-pulse"></div>
+
+          {/* Glassmorphism Container */}
+          <div className="z-10 w-full max-w-md p-4 backdrop-blur-md rounded-2xl border border-white/20 bg-white/10 shadow-xl">
             <Lottie animationData={webDevAnimation} loop={true} />
           </div>
-        </motion.div>
-      </div>
-    </section>
+        </motion.div> <br />
+      </div> <br />
+    </section> 
   );
 };
 
