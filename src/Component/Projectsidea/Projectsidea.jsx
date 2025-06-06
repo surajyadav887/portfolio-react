@@ -9,6 +9,7 @@ const ideas = [
     description:
       "We help you launch a stylish eCommerce boutique with inventory, payment, and delivery management built-in.",
     prompt: "Start your fashion journey →",
+    shadowColor: "hover:shadow-[0_4px_25px_rgba(99,102,241,0.4)]", // Indigo
   },
   {
     icon: <FaChartLine size={28} className="text-green-600" />,
@@ -16,6 +17,7 @@ const ideas = [
     description:
       "Turn your market knowledge into a business by creating a course-based platform for investors & learners.",
     prompt: "Monetize your knowledge →",
+    shadowColor: "hover:shadow-[0_4px_25px_rgba(34,197,94,0.4)]", // Green
   },
   {
     icon: <FaLightbulb size={28} className="text-yellow-500" />,
@@ -23,6 +25,7 @@ const ideas = [
     description:
       "We ideate and develop platforms to connect local service providers with nearby customers — plumbers, tutors, and more.",
     prompt: "Launch your local platform →",
+    shadowColor: "hover:shadow-[0_4px_25px_rgba(234,179,8,0.4)]", // Yellow
   },
 ];
 
@@ -45,7 +48,7 @@ const Projectsidea = () => {
         {ideas.map((idea, index) => (
           <motion.div
             key={index}
-            className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-all"
+            className={`bg-white border border-gray-200 p-6 rounded-xl shadow-sm transition-all duration-300 transform hover:scale-105 ${idea.shadowColor}`}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: index * 0.15 }}

@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight, FaStar } from "react-icons/fa";
 
 const testimonials = [
   {
-    name: "Mark Kozlowski",
-    company: "GoodFirms",
+    name: "Shanu Gupta",
+    company: "Shanu-Mart",
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/GoodFirms_logo.png/320px-GoodFirms_logo.png",
     photo: "https://randomuser.me/api/portraits/men/33.jpg",
     feedback:
-      "I have worked with 75Way for a number of years because they are consistent and they are professional. Having someone reliable to work with is a blessing when I am trying to grow my business. I have 20 internal developers, and hire 2 monthly from 75Way. They supplement my team so that I can remain agile.",
+      "I have worked with Webla for months—they’re consistent and professional. Having someone reliable to work with is a blessing while scaling.",
   },
   {
     name: "Kevin Mohl",
@@ -17,7 +17,7 @@ const testimonials = [
     logo: "https://1000logos.net/wp-content/uploads/2021/09/Clutch-Logo-768x432.png",
     photo: "https://randomuser.me/api/portraits/men/34.jpg",
     feedback:
-      "The team at 75Way is reliable, fast, and top-notch. They’ve helped us scale quickly without compromising quality or communication. I’m glad we chose them.",
+      "The team at Webla is reliable, fast, and top-notch. They helped us scale quickly without compromising quality or communication.",
   },
   {
     name: "Sophia Lee",
@@ -25,7 +25,7 @@ const testimonials = [
     logo: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Upwork-logo.svg",
     photo: "https://randomuser.me/api/portraits/women/65.jpg",
     feedback:
-      "A seamless experience from beginning to end. 75Way truly understands how to deliver exactly what the client needs. Great design and development team!",
+      "A seamless experience from beginning to end. Webla understands how to deliver exactly what clients need. Amazing team!",
   },
 ];
 
@@ -37,71 +37,79 @@ const TestimonialSection = () => {
     setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
   useEffect(() => {
-    const interval = setInterval(next, 2000);
+    const interval = setInterval(next, 6000);
     return () => clearInterval(interval);
   }, []);
 
   const testimonial = testimonials[index];
 
   return (
-    <section className="bg-gray-50 py-12 px-4 sm:px-6">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10">
-        {/* Left Section */}
-        <div className="md:w-1/3 space-y-6">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800">
-            What Client Says
+    <section className="relative py-20 bg-gradient-to-br from-sky-100 via-white to-blue-200 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row gap-12 items-center justify-between">
+        {/* Left Panel */}
+        <div className="md:w-1/3 space-y-5 text-center md:text-left">
+          <h2 className="text-5xl font-extrabold text-sky-900 leading-snug">
+            What Our Clients Say
           </h2>
-          <h3 className="text-2xl font-bold text-sky-900">About Us</h3>
-          <p className="text-gray-600 text-base">
-            We are good and best at what we do. Our client’s words of
-            appreciation itself speak about the quality work we deliver. Check
-            it out.
+          <p className="text-gray-600 text-lg">
+            Feedback from our happy clients who trust our design and development process.
           </p>
-          <div className="flex gap-4 mt-6">
+          <div className="flex justify-center md:justify-start gap-4 pt-4">
             <button
               onClick={prev}
-              className="p-3 bg-sky-900 text-white rounded-full hover:bg-sky-700"
+              className="p-3 bg-sky-900 text-white rounded-full shadow-xl hover:scale-110 transition transform"
             >
               <FaArrowLeft />
             </button>
             <button
               onClick={next}
-              className="p-3 bg-sky-900 text-white rounded-full hover:bg-sky-700"
+              className="p-3 bg-sky-900 text-white rounded-full shadow-xl hover:scale-110 transition transform"
             >
               <FaArrowRight />
             </button>
           </div>
         </div>
 
-        {/* Right Section */}
+        {/* Right Panel - Card */}
         <div className="md:w-2/3 w-full">
           <AnimatePresence mode="wait">
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -30 }}
-              transition={{ duration: 0.5 }}
-              className="bg-white p-6 sm:p-8 rounded-2xl shadow-md w-full h-auto"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -40 }}
+              transition={{ duration: 0.6, ease: "easeInOut" }}
+              className="relative bg-white/30 backdrop-blur-lg border border-white/20 p-8 rounded-3xl shadow-2xl"
             >
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                <img
-                  src={testimonial.photo}
-                  alt={testimonial.name}
-                  className="w-16 h-16 rounded-full object-cover border-4 border-white shadow-md"
-                />
-                <div className="w-full">
-                  <p className="text-gray-700 text-base sm:text-lg italic mb-3">
+              <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start">
+                <div className="relative w-20 h-20">
+                  <div className="absolute -inset-1 rounded-full bg-gradient-to-tr from-sky-400 to-purple-400 animate-pulse blur-sm opacity-60"></div>
+                  <img
+                    src={testimonial.photo}
+                    alt={testimonial.name}
+                    className="relative w-20 h-20 rounded-full object-cover border-4 border-white shadow-md"
+                  />
+                </div>
+                <div>
+                  <p className="text-gray-700 text-lg sm:text-xl italic leading-relaxed mb-4">
                     “{testimonial.feedback}”
                   </p>
-                  <p className="font-bold text-black text-lg">
-                    {testimonial.name}
-                  </p>
-                  <img
-                    src={testimonial.logo}
-                    alt={testimonial.company}
-                    className="mt-2 h-6 object-contain"
-                  />
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+                    <span className="text-xl font-semibold text-gray-900">{testimonial.name}</span>
+                    <div className="flex gap-1 text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <FaStar key={i} size={14} />
+                      ))}
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2 mt-2">
+                    <img
+                      src={testimonial.logo}
+                      alt={testimonial.company}
+                      className="h-6 object-contain"
+                    />
+                    <span className="text-sm text-gray-600">{testimonial.company}</span>
+                  </div>
                 </div>
               </div>
             </motion.div>

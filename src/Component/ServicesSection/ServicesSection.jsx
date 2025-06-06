@@ -27,7 +27,6 @@ const services = [
       "From beautiful UI to secure backend, we create responsive websites that grow your business online.",
     prompt: "Launch your website today →",
   },
-  // New services below
   {
     icon: <FaHeartbeat size={30} className="text-red-500" />,
     title: "Healthcare Website Development",
@@ -73,36 +72,52 @@ const services = [
 ];
 
 const ServicesSection = () => {
+  const shadowColors = [
+    "rgba(14, 165, 233, 0.4)",   // sky-500
+    "rgba(147, 51, 234, 0.4)",   // purple-600
+    "rgba(239, 68, 68, 0.4)",    // red-500
+    "rgba(202, 138, 4, 0.4)",    // yellow-600
+    "rgba(30, 64, 175, 0.4)",    // blue-700
+    "rgba(249, 115, 22, 0.4)",   // orange-500
+    "rgba(219, 39, 119, 0.4)",   // pink-600
+    "rgba(109, 40, 217, 0.4)",   // purple-700
+  ];
+
   return (
     <section className="py-20 px-6 bg-white text-gray-800">
       {/* Heading */}
       <div className="max-w-4xl mx-auto text-center mb-12 px-4">
-  <h2 className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] font-medium leading-snug text-gray-900 mb-4">
-    <strong className="text-blue-700">Idea,Design,Development,</strong> Quality Assurance, <br className="hidden sm:block" />
-    Launching, Marketing...
-  </h2>
-  <h3 className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] font-extrabold text-[#0b3c4c]">
-    All At One Place
-  </h3>
-</div>
-
+        <h2 className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] font-medium leading-snug text-gray-900 mb-4 font-['Playfair_Display']">
+          <strong className="text-blue-700">Idea, Design, Development,</strong> Quality Assurance, <br className="hidden sm:block" />
+          Launching, Marketing...
+        </h2>
+        <h3 className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] font-extrabold text-[#0b3c4c] font-['Playfair_Display']">
+          All At One Place
+        </h3>
+      </div>
 
       {/* Services Grid */}
       <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className="border border-gray-200 p-6 rounded-lg hover:shadow-md transition duration-300 bg-white"
+            className="border border-gray-200 p-6 rounded-lg transition duration-300 bg-white"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: index * 0.1 }}
             viewport={{ once: true }}
+            style={{
+              boxShadow: "0 0 0 rgba(0,0,0,0)",
+              transition: "box-shadow 0.3s ease-in-out",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = `0 10px 25px -5px ${shadowColors[index % shadowColors.length]}`;
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = "0 0 0 rgba(0,0,0,0)";
+            }}
           >
-            {/* Icon wrapper with hover rotate */}
-            <div
-              className="mb-4 inline-block transition-transform duration-500 ease-in-out hover:rotate-180"
-              style={{ display: "inline-block" }}
-            >
+            <div className="mb-4 inline-block transition-transform duration-500 ease-in-out hover:rotate-180">
               {service.icon}
             </div>
             <h4 className="text-lg font-semibold text-gray-900 mb-2">{service.title}</h4>

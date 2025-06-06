@@ -5,7 +5,7 @@ import Lottie from "lottie-react";
 import webDevAnimation from "../../assets/WebDev.json";
 
 const prompts = [
-  "We are Webala",
+  "We are Webla",
   "We are a tech family",
   "We build brands",
   "We craft digital dreams",

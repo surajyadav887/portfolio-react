@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 import appImage from "../../assets/website.png";
@@ -11,6 +11,7 @@ const services = [
     description:
       "We build seamless mobile applications tailored to your business needs, ensuring top performance and user engagement.",
     prompt: "Let’s build your next app →",
+    shadowColor: "rgba(99, 102, 241, 0.4)", // indigo
   },
   {
     image: appImage,
@@ -18,10 +19,13 @@ const services = [
     description:
       "From beautiful UI to secure backend, we create responsive websites that grow your business online.",
     prompt: "Launch your website today →",
+    shadowColor: "rgba(79, 70, 229, 0.4)", // slightly darker indigo
   },
 ];
 
 const Servicesprovider = () => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
   return (
     <section
       className="pt-20 pb-14 bg-gradient-to-br from-white to-slate-100"
@@ -59,11 +63,22 @@ const Servicesprovider = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="rounded-2xl p-5 text-left group transition-all duration-300 hover:shadow-xl hover:ring-1 hover:ring-indigo-200"
+              className="rounded-2xl p-5 text-left group transition-all duration-300 bg-white"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.3 }}
               viewport={{ once: true }}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+              style={{
+                transform:
+                  hoveredIndex === index ? "rotate(360deg)" : "rotate(0deg)",
+                boxShadow:
+                  hoveredIndex === index
+                    ? `0 10px 25px ${service.shadowColor}`
+                    : "0 0 0 rgba(0,0,0,0)",
+                transition: "all 0.6s ease-in-out",
+              }}
             >
               <motion.img
                 src={service.image}

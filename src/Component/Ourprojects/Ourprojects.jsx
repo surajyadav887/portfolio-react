@@ -1,6 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaExternalLinkAlt, FaSchool, FaHospitalSymbol, FaUniversity, FaRing, FaShoppingBasket } from "react-icons/fa";
+import {
+  FaExternalLinkAlt,
+  FaSchool,
+  FaHospitalSymbol,
+  FaUniversity,
+  FaRing,
+  FaShoppingBasket,
+} from "react-icons/fa";
 
 const projects = [
   {
@@ -10,6 +17,7 @@ const projects = [
       "A user-friendly grocery delivery platform that allows customers to browse products, add items to cart, and place orders with real-time status updates.",
     tech: ["React", "Redux", "TailwindCSS", "Node.js", "MongoDB", "Firebase", "HTML", "Git"],
     link: "https://grocery-ui-one.vercel.app/login",
+    shadowColor: "hover:shadow-[0_4px_24px_rgba(236,72,153,0.4)]", // Pink
   },
   {
     title: "School Management System",
@@ -18,6 +26,7 @@ const projects = [
       "A full-featured school management system to handle admissions, attendance, student progress, and teacher coordination — all in one dashboard.",
     tech: ["React", "Node.js", "MongoDB", "Express.js", "TailwindCSS", "Git"],
     link: "https://school-web-eta-seven.vercel.app/",
+    shadowColor: "hover:shadow-[0_4px_24px_rgba(37,99,235,0.4)]", // Blue
   },
   {
     title: "Institute Management System",
@@ -26,6 +35,7 @@ const projects = [
       "A scalable solution for educational institutions with features like student enrollment, faculty modules, payment tracking, and reporting tools.",
     tech: ["React", "Redux", "TailwindCSS", "Node.js", "MongoDB", "Firebase", "HTML", "Git"],
     link: "https://institute-frontend-mocha.vercel.app/",
+    shadowColor: "hover:shadow-[0_4px_24px_rgba(22,163,74,0.4)]", // Green
   },
   {
     title: "Marriage Hall Booking",
@@ -34,6 +44,7 @@ const projects = [
       "A modern marriage hall booking portal where users can check availability, explore event packages, and book halls online with integrated payment options.",
     tech: ["React", "Redux", "TailwindCSS", "Node.js", "MongoDB", "Firebase", "HTML", "Git"],
     link: "https://mairage-ract.vercel.app/",
+    shadowColor: "hover:shadow-[0_4px_24px_rgba(239,68,68,0.4)]", // Red
   },
   {
     title: "Admission Counseling Platform",
@@ -42,6 +53,7 @@ const projects = [
       "An intuitive platform to guide students through the admission process — includes university listings, real-time counseling, and document submission.",
     tech: ["React", "Redux", "TailwindCSS", "Node.js", "MongoDB", "Firebase", "HTML", "Git"],
     link: "https://fastadmissionportal.onrender.com/",
+    shadowColor: "hover:shadow-[0_4px_24px_rgba(168,85,247,0.4)]", // Purple
   },
 ];
 
@@ -63,7 +75,7 @@ const Ourprojects = () => {
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="border border-gray-200 p-6 rounded-xl bg-white shadow-sm hover:shadow-md transition-all"
+            className={`border border-gray-200 p-6 rounded-xl bg-white shadow-sm transition-all duration-300 transform hover:scale-[1.03] ${project.shadowColor}`}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: index * 0.1 }}
