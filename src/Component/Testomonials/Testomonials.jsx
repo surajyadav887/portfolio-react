@@ -48,11 +48,13 @@ const TestimonialSection = () => {
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row gap-12 items-center justify-between">
         {/* Left Panel */}
         <div className="md:w-1/3 space-y-5 text-center md:text-left">
-          <h2 className="text-5xl font-extrabold text-sky-900 leading-snug">
+          <h2 className="text-5xl font-extrabold text-sky-900 leading-snug font-playfair">
             What Our Clients Say
           </h2>
+
           <p className="text-gray-600 text-lg">
-            Feedback from our happy clients who trust our design and development process.
+            Feedback from our happy clients who trust our design and development
+            process.
           </p>
           <div className="flex justify-center md:justify-start gap-4 pt-4">
             <button
@@ -95,7 +97,9 @@ const TestimonialSection = () => {
                     “{testimonial.feedback}”
                   </p>
                   <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-                    <span className="text-xl font-semibold text-gray-900">{testimonial.name}</span>
+                    <span className="text-xl font-semibold text-gray-900">
+                      {testimonial.name}
+                    </span>
                     <div className="flex gap-1 text-yellow-400">
                       {[...Array(5)].map((_, i) => (
                         <FaStar key={i} size={14} />
@@ -108,7 +112,9 @@ const TestimonialSection = () => {
                       alt={testimonial.company}
                       className="h-6 object-contain"
                     />
-                    <span className="text-sm text-gray-600">{testimonial.company}</span>
+                    <span className="text-sm text-gray-600">
+                      {testimonial.company}
+                    </span>
                   </div>
                 </div>
               </div>

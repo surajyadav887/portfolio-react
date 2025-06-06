@@ -62,13 +62,13 @@ const Ourprojects = () => {
     <section className="py-20 px-6 bg-white text-gray-900">
       {/* Heading */}
       <div className="max-w-4xl mx-auto text-center mb-12 px-4">
-        <h2 className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] font-bold text-blue-800">
-          Our Deployed Projects in the Market
-        </h2>
-        <p className="text-gray-600 mt-3 text-sm sm:text-base max-w-2xl mx-auto">
-          We’ve built and launched real-world projects for various industries. These applications are helping businesses operate more efficiently and connect with users globally.
-        </p>
-      </div>
+  <h2 className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] font-bold text-blue-800 font-playfair">
+    Our Deployed Projects in the Market
+  </h2>
+  <p className="text-gray-600 mt-3 text-sm sm:text-base max-w-2xl mx-auto font-playfair">
+    We’ve built and launched real-world projects for various industries. These applications are helping businesses operate more efficiently and connect with users globally.
+  </p>
+</div>
 
       {/* Project Cards */}
       <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">

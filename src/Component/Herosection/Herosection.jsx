@@ -26,7 +26,6 @@ const Herosection = () => {
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-indigo-50 to-indigo-100 overflow-hidden px-6 pt-24 md:pt-0">
       {/* Background Pattern */}
       <div className="absolute inset-0 z-0 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
-
       <div className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-16">
         {/* Left Section - Text */}
         <motion.div
@@ -35,7 +34,7 @@ const Herosection = () => {
           transition={{ duration: 0.8 }}
           className="space-y-8"
         >
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight font-playfair">
             <AnimatePresence mode="wait">
               <motion.span
                 key={prompts[index]}
@@ -51,7 +50,7 @@ const Herosection = () => {
           </h1>
 
           <motion.p
-            className="text-lg text-gray-700 max-w-xl leading-relaxed"
+            className="text-lg text-gray-700 max-w-xl leading-relaxed font-playfair"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
@@ -81,7 +80,6 @@ const Herosection = () => {
             </motion.a>
           </div>
         </motion.div>
-
         {/* Right Section - Lottie Animation */}
         <motion.div
           initial={{ x: 100, opacity: 0 }}
@@ -96,9 +94,11 @@ const Herosection = () => {
           <div className="z-10 w-full max-w-md p-4 backdrop-blur-md rounded-2xl border border-white/20 bg-white/10 shadow-xl">
             <Lottie animationData={webDevAnimation} loop={true} />
           </div>
-        </motion.div> <br />
-      </div> <br />
-    </section> 
+        </motion.div>{" "}
+        <br />
+      </div>{" "}
+      <br />
+    </section>
   );
 };
 

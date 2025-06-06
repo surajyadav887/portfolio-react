@@ -70,13 +70,15 @@ const Technology = () => {
   return (
     <section className="bg-gradient-to-tr from-indigo-50 to-purple-100 py-16 px-4">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-6">
-          Technologies We Use
-        </h2>
-        <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">
-          These are the latest tools and technologies we use to build
-          high-performance, scalable, and beautiful digital experiences.
-        </p>
+     <h2 className="text-4xl font-bold text-center text-gray-800 mb-6 font-playfair">
+  <span className="text-purple-600">Technologies</span> We <span className="text-indigo-600">Use</span>
+</h2>
+
+<p className="text-center text-gray-600 max-w-2xl mx-auto mb-12 font-playfair">
+  These are the latest tools and technologies we use to build
+  high-performance, scalable, and beautiful digital experiences.
+</p>
+
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
