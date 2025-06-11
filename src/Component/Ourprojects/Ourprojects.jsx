@@ -16,7 +16,7 @@ const projects = [
     description:
       "A user-friendly grocery delivery platform that allows customers to browse products, add items to cart, and place orders with real-time status updates.",
     tech: ["React", "Redux", "TailwindCSS", "Node.js", "MongoDB", "Firebase", "HTML", "Git"],
-    link: "https://grocery-ui-one.vercel.app/login",
+    link: "https://www.shanumart.in/",
     shadowColor: "hover:shadow-[0_4px_24px_rgba(236,72,153,0.4)]", // Pink
   },
   {
