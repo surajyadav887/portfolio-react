@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaArrowLeft, FaArrowRight, FaStar } from "react-icons/fa";
-
+import image1 from "../../assets/shanu.png"
+import image2 from "../../assets/sahil.png"
 const testimonials = [
   {
     name: "Shanu Gupta",
     company: "Shanu-Mart",
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/GoodFirms_logo.png/320px-GoodFirms_logo.png",
-    photo: "https://randomuser.me/api/portraits/men/33.jpg",
+    photo: image1,
     feedback:
       "I have worked with Webla for months—they’re consistent and professional. Having someone reliable to work with is a blessing while scaling.",
   },
   {
-    name: "Kevin Mohl",
-    company: "Clutch",
+    name: "Sahil Kehra",
+    company: "Cihs",
     logo: "https://1000logos.net/wp-content/uploads/2021/09/Clutch-Logo-768x432.png",
-    photo: "https://randomuser.me/api/portraits/men/34.jpg",
+    photo: image2,
     feedback:
       "The team at Webla is reliable, fast, and top-notch. They helped us scale quickly without compromising quality or communication.",
   },

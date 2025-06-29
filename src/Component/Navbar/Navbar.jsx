@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import logo from "../../assets/webla1.png"; // Adjust path if needed
 
-const navLinks = ["About", "Projects", "Skills", "Contact"];
+const navLinks = ["Aboutdeveloper", "Ourprojects","Technology","Servicesprovider","ServicesSection","ContactUs"];
 
 export default function PortfolioNavbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +37,7 @@ export default function PortfolioNavbar() {
           <div className="relative">
             <h1 className="text-4xl font-black uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-yellow-500 to-pink-600 drop-shadow-lg font-playfair">
               <span className="inline-block animate-glow">Web</span>
-              <span className="text-indigo-500 animate-glow delay-200">la</span>
+              <span className="text-indigo-500 animate-glow delay-200">ala</span>
             </h1>
             <div className="absolute top-1/2 left-0 w-full h-[2px] bg-white/30 opacity-0 group-hover:opacity-100 animate-shine" />
           </div>

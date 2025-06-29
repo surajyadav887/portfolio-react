@@ -14,21 +14,36 @@ import Enquiry from "./Component/Enquiry/Enquiry";
 import OurMoto from "./Component/Ourmoto/Ourmoto";
 // import Developerskills from './Component/Developerskills/Developerskills'
 
-const  LandingPage = () => {
+const LandingPage = () => {
   return (
     <div>
       {/* <Navbar /> */}
-      <Herosection />
+      <section id="herosection">
+        <Herosection />
+      </section>
       {/* <Developerskills/> */}
-      <Technology />
-      <Servicesprovider />
-      <ServicesSection />
-      <Projectsidea/>
-      <Ourprojects/>
-      <Aboutdeveloper />
+      <section id="technology">
+        <Technology />
+      </section>
+
+      <section id="servicesprovider">
+        <Servicesprovider />
+      </section>
+      <section id="servicessection">
+        <ServicesSection/>
+      </section>
+      <Projectsidea />
+      <section id="ourprojects">
+        <Ourprojects />
+      </section>
+      <section id="aboutdeveloper">
+        <Aboutdeveloper />
+      </section>
       <Testomonials />
-      <ContactUs/>
-      <Enquiry/>
+      <section id="contactus">
+        <ContactUs />
+      </section>
+      <Enquiry />
       <OurMoto />
       {/* <Footer /> */}
     </div>

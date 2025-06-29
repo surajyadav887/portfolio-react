@@ -18,7 +18,9 @@ import LandingPage from "./LandingPage";
 const Router = () => {
   return (
     <Routes>
-      <Route path="/" element={<LandingPage />} />
+      <Route path="/" element={<LandingPage />}/>
+      <Route path="#technology" element={<Technology/>}/>
+
       
     </Routes>
   );
