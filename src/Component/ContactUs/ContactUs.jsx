@@ -44,9 +44,9 @@ const ContactUs = () => {
               <a href="tel:+917352205506" className="text-blue-600 block mb-2">
                 +91 7352205506
               </a>
-              <p>Aviraj Singh</p>
-              <a href="tel:+917352205506" className="text-blue-600 block">
-                +91 7352205506
+              <p>Avi Raj</p>
+              <a href="tel:+916200594193" className="text-blue-600 block">
+                +91 6200594193
               </a>
             </div>
           </motion.div>
@@ -78,7 +78,7 @@ const ContactUs = () => {
                 href="mailto:tiwarisunny7352@gmail.com"
                 className="text-blue-600 block"
               >
-                tiwarisunny7352@gmail.com
+               aviraj0403@gmail.com & tiwarisunny7352@gmail.com
               </a>
             </div>
           </motion.div>
