@@ -1,13 +1,23 @@
 // PortfolioNavbar.jsx
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import logo from "../../assets/webla1.png"; // Adjust path if needed
+import logo from "../../assets/webla1.png";
 
-const navLinks = ["Aboutdeveloper", "Ourprojects","Technology","Servicesprovider","ServicesSection","ContactUs"];
+// Unique nav links and colors
+const navLinks = ["Aboutdeveloper", "ourproject", "Technology", "Servicesprovider", "ServicesSection", "ContactUs"];
+const linkColors = ["text-purple-500"];
 
 export default function PortfolioNavbar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  // Load the Google Font dynamically (only once)
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.href = "https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap";
+    link.rel = "stylesheet";
+    document.head.appendChild(link);
+  }, []);
 
   return (
     <motion.nav
@@ -23,7 +33,6 @@ export default function PortfolioNavbar() {
           className="flex items-center gap-4 group"
           whileHover={{ scale: 1.1 }}
         >
-          {/* Glowing Gradient Logo */}
           <div className="relative w-16 h-16 md:w-14 md:h-14 rounded-full overflow-hidden shadow-lg">
             <div className="absolute inset-0 z-0 animate-spin-slow bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500 rounded-full blur-lg opacity-30"></div>
             <img
@@ -32,12 +41,14 @@ export default function PortfolioNavbar() {
               className="relative z-10 w-full h-full object-cover rounded-full border-2 border-white/20 backdrop-blur-md"
             />
           </div>
-
-          {/* Logo Text */}
           <div className="relative">
-            <h1 className="text-4xl font-black uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-yellow-500 to-pink-600 drop-shadow-lg font-playfair">
-              <span className="inline-block animate-glow">Web</span>
-              <span className="text-indigo-500 animate-glow delay-200">ala</span>
+            <h1 className="text-4xl tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-yellow-500 to-pink-600 drop-shadow-lg">
+              <span className="inline-block animate-glow" style={{ fontFamily: "'Great Vibes', cursive" }}>
+                Web
+              </span>
+              <span className="text-indigo-500 animate-glow delay-200" style={{ fontFamily: "'Great Vibes', cursive" }}>
+                ala
+              </span>
             </h1>
             <div className="absolute top-1/2 left-0 w-full h-[2px] bg-white/30 opacity-0 group-hover:opacity-100 animate-shine" />
           </div>
@@ -49,7 +60,7 @@ export default function PortfolioNavbar() {
             <motion.a
               key={i}
               href={`#${link.toLowerCase()}`}
-              className="text-gray-700 hover:text-indigo-600 transition font-playfair"
+              className={`hover:underline transition font-playfair ${linkColors[i % linkColors.length]}`}
               whileHover={{ scale: 1.1 }}
             >
               {link}
@@ -57,14 +68,16 @@ export default function PortfolioNavbar() {
           ))}
         </div>
 
-        {/* Mobile Toggle Button */}
+        {/* Mobile Toggle */}
         <div className="md:hidden">
-          <button
+          <motion.button
             onClick={() => setIsOpen(!isOpen)}
+            whileHover={{ rotate: 360 }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
             className="text-gray-700 focus:outline-none"
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+          </motion.button>
         </div>
       </div>
 
@@ -80,7 +93,7 @@ export default function PortfolioNavbar() {
             <a
               key={i}
               href={`#${link.toLowerCase()}`}
-              className="block text-gray-700 hover:text-indigo-600 transition font-playfair"
+              className={`block transition font-playfair ${linkColors[i % linkColors.length]} hover:underline`}
               onClick={() => setIsOpen(false)}
             >
               {link}

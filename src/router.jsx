@@ -20,6 +20,7 @@ const Router = () => {
     <Routes>
       <Route path="/" element={<LandingPage />}/>
       <Route path="#technology" element={<Technology/>}/>
+      {/* <Route path="#servicesprovider" element={<Servicesprovider/>}/> */}
 
       
     </Routes>

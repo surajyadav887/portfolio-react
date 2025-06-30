@@ -20,8 +20,11 @@ const Footer = () => {
         <div>
           <h2 className="text-xl font-bold mb-4">Webla</h2>
           <p className="text-sm text-gray-300 mb-4">
-            We provide all kinds of website services including dynamic and static web design tailored to your needs.
+            We specialize in dynamic & static website development, mobile app development
+            (Android/iOS), and seamless WhatsApp authentication setup — all
+            customized to meet your business goals.
           </p>
+
           <div className="text-sm text-gray-400 space-y-1">
             <p>
               📍{" "}
@@ -31,7 +34,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:text-purple-400"
               >
-              patna,  Bihar, India
+                patna, Bihar, India
               </a>
             </p>
             <p>
@@ -51,16 +54,24 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2 text-sm text-gray-300">
             <li>
-              <a href="#about" className="hover:text-purple-400 transition">About</a>
+              <a href="#about" className="hover:text-purple-400 transition">
+                About
+              </a>
             </li>
             <li>
-              <a href="#projects" className="hover:text-purple-400 transition">Projects</a>
+              <a href="#projects" className="hover:text-purple-400 transition">
+                Projects
+              </a>
             </li>
             <li>
-              <a href="#skills" className="hover:text-purple-400 transition">Skills</a>
+              <a href="#skills" className="hover:text-purple-400 transition">
+                Skills
+              </a>
             </li>
             <li>
-              <a href="#contact" className="hover:text-purple-400 transition">Contact</a>
+              <a href="#contact" className="hover:text-purple-400 transition">
+                Contact
+              </a>
             </li>
           </ul>
         </div>
@@ -69,19 +80,44 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4">Connect with Me</h3>
           <div className="flex gap-4 text-gray-300">
-            <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-blue-500">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-blue-500"
+            >
               <FaFacebookF />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-pink-500">
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-pink-500"
+            >
               <FaInstagram />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-sky-400">
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-sky-400"
+            >
               <FaTwitter />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-blue-400">
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-blue-400"
+            >
               <FaLinkedinIn />
             </a>
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-gray-300">
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-gray-300"
+            >
               <FaGithub />
             </a>
           </div>

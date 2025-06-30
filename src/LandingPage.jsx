@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./Component/Navbar/Navbar";
 import Herosection from "./Component/Herosection/Herosection";
-import Footer from "./Component/Footer/Footer";
+// import Footer from "./Component/Footer/Footer";
 import Technology from "./Component/Technology/Technology";
 import Aboutdeveloper from "./Component/aboutdevelopers/Aboutdevelopers";
 import Servicesprovider from "./Component/servicesprovides/Servicesprovider";
@@ -33,7 +33,7 @@ const LandingPage = () => {
         <ServicesSection/>
       </section>
       <Projectsidea />
-      <section id="ourprojects">
+      <section id="ourproject">
         <Ourprojects />
       </section>
       <section id="aboutdeveloper">
