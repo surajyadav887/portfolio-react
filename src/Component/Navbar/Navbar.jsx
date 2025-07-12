@@ -87,7 +87,7 @@ export default function PortfolioNavbar() {
           className="md:hidden bg-white px-6 pb-4 space-y-2"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.3 }} 
         >
           {navLinks.map((link, i) => (
             <a

@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import image1 from "../../assets/viru.jpg"
+import image1 from "../../assets/viru.jpg";
 import abhi from "../../assets/abhi.png";
 import abhi1 from "../../assets/abhi1.png";
 import sudh1 from "../../assets/sudh.jpg";
-import suraj from "../../assets/suraj.jpg"
-import ritik from "../../assets/ritik.jpg"
+import suraj from "../../assets/suraj.jpg";
+import ritik from "../../assets/ritik.jpg";
 const developers = [
   {
     name: "Avi Raj Singh",
@@ -45,16 +45,13 @@ const developers = [
   },
 ];
 
-
 const Aboutdevelopers = () => {
   return (
     <section className="bg-gradient-to-br from-purple-50 to-indigo-100 py-12 px-3">
       <div className="max-w-7xl mx-auto">
-      <h2
-  className="text-3xl sm:text-4xl font-extrabold text-center bg-gradient-to-r from-fuchsia-600 via-indigo-600 to-sky-600 bg-clip-text text-transparent font-['Playfair_Display'] mb-10"
->
-  Meet Our Team
-</h2>
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-center bg-gradient-to-r from-fuchsia-600 via-indigo-600 to-sky-600 bg-clip-text text-transparent font-['Playfair_Display'] mb-10">
+          Meet Our Team
+        </h2>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-5 sm:gap-8">
           {developers.map((dev, index) => (
