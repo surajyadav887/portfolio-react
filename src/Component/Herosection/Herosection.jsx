@@ -120,7 +120,7 @@ const Herosection = () => {
           <motion.img
             src={heroImage}
             alt="Web development illustration"
-            className="w-full h-auto object-contain mt-6 md:mt-20 md:max-w-[80%]"
+            className="w-full h-auto object-contain mt-6 md:mt-20 md:max-w-[80%] animate-bounce"
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
           />
