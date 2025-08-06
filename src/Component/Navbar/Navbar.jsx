@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import logo from "../../assets/webla1.png";
+import logo from "../../assets/webalalogo2.jpeg";
 
 // Unique nav links and colors
 const navLinks = ["Aboutdeveloper", "ourproject", "Technology", "Servicesprovider", "ServicesSection", "ContactUs"];

@@ -18,16 +18,19 @@ const LandingPage = () => {
   return (
     <div>
       {/* <Navbar /> */}
+      
       <section id="herosection">
         <Herosection />
       </section>
       {/* <Developerskills/> */}
-      <section id="technology">
-        <Technology />
-      </section>
+      
 
       <section id="servicesprovider">
         <Servicesprovider />
+      </section>
+      
+      <section id="technology">
+        <Technology />
       </section>
       <section id="servicessection">
         <ServicesSection/>
