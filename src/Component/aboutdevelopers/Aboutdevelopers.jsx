@@ -4,50 +4,51 @@ import image1 from "../../assets/viru.jpg";
 import abhi from "../../assets/abhi.png";
 import abhi1 from "../../assets/abhi1.png";
 import sudh1 from "../../assets/sudh.jpg";
-import suraj from "../../assets/suraj.jpg";
+import suraj from "../../assets/deepak.jpeg";
 import ritik from "../../assets/ritik.jpg";
 const developers = [
   {
-    name: "Avi Raj Singh",
-    role: "Full Stack Developer",
-    image: abhi,
-    desc: "Expert in building full-fledged web applications with seamless integration between frontend and backend using the MERN stack.",
-  },
-  {
-    name: "Sudhanshu Kumar",
-    role: "Frontend Developer / UI/UX Designer",
-    image: sudh1,
-    desc: "Specializes in designing engaging, user-centric interfaces with a sharp eye for color, typography, and intuitive layouts.",
-  },
-  {
-    name: "Abhishek Pandey",
-    role: "Frontend Developer",
-    image: abhi1,
-    desc: "Delivers fast, scalable, and accessible web apps using React, mastering component-driven development and performance tuning.",
-  },
-  {
-    name: "Virat Rana",
-    role: "Influencer / Web Developer",
-    image: image1,
-    desc: "Combines social reach with technical expertise to promote, build, and review creative digital experiences and web tools.",
-  },
-  {
-    name: "Suraj Yadav",
-    role: "Frontend Developer",
-    image: suraj,
-    desc: "Creates elegant, high-performance UIs using React and Next.js, with a passion for animations, micro-interactions, and user delight.",
-  },
-  {
-    name: "Hritik Thakur",
-    role: "Python Developer & AI/ML Engineer",
-    image: ritik,
-    desc: "Designs intelligent systems and automates processes using Python, with a strong foundation in machine learning and data science.",
-  },
+  name: "Avi Raj Singh",
+  role: "COO & Tech Lead",
+  image: abhi,
+  desc: "Driving Webala’s technology vision, Avi Raj seamlessly bridges frontend creativity with backend power, crafting secure, scalable, and high-performance MERN applications.",
+},
+{
+  name: "Sudhanshu Kumar",
+  role: "Founder & Product Manager",
+  image: sudh1,
+  desc: "The creative brain behind Webala, Sudhanshu blends design artistry with flawless execution, delivering visually stunning, user-focused digital experiences.",
+},
+{
+  name: "Deepak Kumar Singh",
+  role: "CEO & Sales & Marketing Head",
+  image: suraj,
+  desc: "A visionary leader and growth strategist, Deepak transforms opportunities into partnerships, driving brand success through innovation, strategy, and a client-first approach.",
+},
+{
+  name: "Abhishek Pandey",
+  role: "Full-Stack Developer",
+  image: abhi1,
+  desc: "Turning concepts into pixel-perfect realities, Abhishek crafts lightning-fast, responsive, and engaging UIs that elevate user experience across all devices.",
+},
+{
+  name: "Virat Rana",
+  role: "Influencer & Web Developer",
+  image: image1,
+  desc: "Merging influence with innovation, Virat builds impactful web solutions while amplifying Webala’s reach through creative content and digital engagement.",
+},
+{
+  name: "Hritik Thakur",
+  role: "Python Developer & AI/ML Engineer",
+  image: ritik,
+  desc: "Engineering intelligent solutions, Hritik harnesses the power of AI, ML, and automation to create smarter, data-driven systems that solve real-world problems.",
+},
+
 ];
 
 const Aboutdevelopers = () => {
   return (
-    <section className="bg-gradient-to-br from-purple-50 to-indigo-100 py-12 px-3">
+    <section className="bg-gradient-to-br from-purple-50 to-indigo-100 py-12 px-3 font-playfair">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-center bg-gradient-to-r from-fuchsia-600 via-indigo-600 to-sky-600 bg-clip-text text-transparent font-['Playfair_Display'] mb-10">
           Meet Our Team
